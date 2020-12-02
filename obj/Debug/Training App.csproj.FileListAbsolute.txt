@@ -1,0 +1,14 @@
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Training App.exe.config
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Training App.exe
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Training App.pdb
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.AddPatientForm.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.MainMenu.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.Properties.Resources.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.csproj.GenerateResource.cache
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.exe
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.pdb
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.PatientInfoForm.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.csprojAssemblyReference.cache
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.AddPatientReaserchForm.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.StartPatientResearchForm.resources
