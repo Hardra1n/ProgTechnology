@@ -1,2 +1,2 @@
 # ProgTechnology
-Universiry's course
+University's course
