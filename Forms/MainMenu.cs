@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +13,17 @@ namespace View
 {
     public partial class MainMenu : Form
     {
+        ControlService _service;
         public MainMenu()
         {
             InitializeComponent();
+            _service = new ControlService();
         }
 
         private void addPatientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddPatientForm addPatientForm = new AddPatientForm();
+            AddPatientForm addPatientForm = new AddPatientForm(_service);
             addPatientForm.Show();
-        }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
