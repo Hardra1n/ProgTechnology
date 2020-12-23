@@ -30,6 +30,7 @@
         {
             this.addPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.patientPanel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,16 +48,26 @@
             this.addPatientToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(555, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(551, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // patientPanel
+            // 
+            this.patientPanel.AutoScroll = true;
+            this.patientPanel.Location = new System.Drawing.Point(0, 33);
+            this.patientPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.patientPanel.Name = "patientPanel";
+            this.patientPanel.Size = new System.Drawing.Size(548, 484);
+            this.patientPanel.TabIndex = 1;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(555, 531);
+            this.ClientSize = new System.Drawing.Size(551, 524);
+            this.Controls.Add(this.patientPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainMenu";
@@ -73,6 +84,7 @@
 
         private System.Windows.Forms.ToolStripMenuItem addPatientToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Panel patientPanel;
     }
 }
 

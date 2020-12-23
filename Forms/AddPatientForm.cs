@@ -14,10 +14,12 @@ namespace View
     public partial class AddPatientForm : Form
     {
         ControlService _service;
-        public AddPatientForm(ControlService service)
+        MainMenu _form;
+        public AddPatientForm(ControlService service, MainMenu form)
         {
             InitializeComponent();
             _service = service;
+            _form = form;
             textBox1.Text = textBox2.Text = textBox3.Text = string.Empty;
         }
 
@@ -27,6 +29,7 @@ namespace View
 
 
                 _service.AddPatient(textBox1.Text, textBox2.Text, textBox3.Text, (byte)numericUpDown1.Value, radioButton1.Checked? "Женский" : "Мужской");
+                _form.UpdatePatientList();
                 this.Close(); 
             }
         }
