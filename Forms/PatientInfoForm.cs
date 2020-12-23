@@ -1,12 +1,7 @@
 ﻿using Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
@@ -36,19 +31,37 @@ namespace View
 
         private void PatientInfoForm_Load(object sender, EventArgs e)
         {
-
+            UpdateResearchList();
         }
 
         private void addResearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddPatientReaserchForm addPatientReaserchForm = new AddPatientReaserchForm();
+            AddPatientReaserchForm addPatientReaserchForm = new AddPatientReaserchForm(_service, _patient, this);
             addPatientReaserchForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void UpdateResearchList()
         {
-            StartPatientResearchForm startPatientResearchForm = new StartPatientResearchForm();
-            startPatientResearchForm.Show();
+            int y = 7;
+            foreach (Research research in _patient.researches)
+            {
+                Button button = new Button();
+                StringBuilder buttonName = new StringBuilder();
+                button.Text = buttonName.Append(research.date.ToString())
+                                        .Append(" ")
+                                        .Append(research.type.ToString())
+                                        .Append(" ")
+                                        .Append(research.duration.ToString())
+                                        .Append(" min")
+                                        .ToString();
+                button.Location = new Point(10, y);
+                y += 30;
+                button.Width = Width - 40;
+                button.BackColor = SystemColors.ScrollBar;
+                button.Font = new Font("Segoe UI", 9f);
+                button.TextAlign = ContentAlignment.MiddleLeft;
+                panel1.Controls.Add(button);
+            }
         }
     }
 }

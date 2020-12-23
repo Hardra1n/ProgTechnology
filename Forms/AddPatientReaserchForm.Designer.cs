@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Ходьба";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -160,6 +160,16 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Добавить исследование";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.AddResearchClick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "label5";
             // 
             // AddPatientReaserchForm
             // 
@@ -167,6 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(535, 514);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label4);
@@ -203,5 +214,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -42,6 +42,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,12 +160,20 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Пол пациента";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 276);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(543, 255);
+            this.panel1.TabIndex = 12;
+            // 
             // PatientInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(555, 531);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -202,5 +211,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel1;
     }
 }
