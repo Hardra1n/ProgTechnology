@@ -34,10 +34,19 @@ namespace View
             UpdateResearchList();
         }
 
-        private void addResearchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddResearchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddPatientReaserchForm addPatientReaserchForm = new AddPatientReaserchForm(_service, _patient, this);
             addPatientReaserchForm.Show();
+        }
+
+        public void StartPatientResearchButton(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            if (button != null) {
+                StartPatientResearchForm startPatientResearchForm = new StartPatientResearchForm(_service, _service.GetResearch(int.Parse(button.Tag.ToString()), _patient));
+                startPatientResearchForm.Show();
+            }
         }
 
         public void UpdateResearchList()
@@ -46,6 +55,7 @@ namespace View
             foreach (Research research in _patient.researches)
             {
                 Button button = new Button();
+                button.Tag = research.id.ToString();
                 StringBuilder buttonName = new StringBuilder();
                 button.Text = buttonName.Append(research.date.ToString())
                                         .Append(" ")
@@ -58,6 +68,7 @@ namespace View
                 y += 30;
                 button.Width = Width - 40;
                 button.BackColor = SystemColors.ScrollBar;
+                button.Click += StartPatientResearchButton;
                 button.Font = new Font("Segoe UI", 9f);
                 button.TextAlign = ContentAlignment.MiddleLeft;
                 panel1.Controls.Add(button);

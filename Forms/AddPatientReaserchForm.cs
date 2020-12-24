@@ -39,9 +39,14 @@ namespace View
             bool SkinMoisureInd = checkedListBox1.GetItemChecked(2);
             bool ElectrCondInd = checkedListBox1.GetItemChecked(3);
             bool PulseInd = checkedListBox1.GetItemChecked(4);
-            _service.AddResearch(_patient, date, type, duration, ArterialPressInd, SkinTempInd, ElectrCondInd, PulseInd);
+            _service.AddResearch(_patient, date, type, duration, ArterialPressInd, SkinTempInd, SkinMoisureInd, ElectrCondInd, PulseInd);
             _view.UpdateResearchList(); 
             this.Close();
     }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

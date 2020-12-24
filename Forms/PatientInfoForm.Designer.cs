@@ -68,7 +68,7 @@
             this.addResearchToolStripMenuItem.Name = "addResearchToolStripMenuItem";
             this.addResearchToolStripMenuItem.Size = new System.Drawing.Size(192, 24);
             this.addResearchToolStripMenuItem.Text = "Добавить исследование";
-            this.addResearchToolStripMenuItem.Click += new System.EventHandler(this.addResearchToolStripMenuItem_Click);
+            this.addResearchToolStripMenuItem.Click += new System.EventHandler(this.AddResearchToolStripMenuItem_Click);
             // 
             // label1
             // 
