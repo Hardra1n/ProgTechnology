@@ -2,6 +2,8 @@
 using Models.Sensor;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 using ZedGraph;
 
@@ -13,7 +15,9 @@ namespace View
         private ControlService _service;
         private Research _research;
         private List<ISensor> sensors = new List<ISensor>();
-
+        private bool isSensorsActive = false;
+        Timer _timer;
+        private int n = 0;
 
         public StartPatientResearchForm()
         {
@@ -25,7 +29,9 @@ namespace View
             InitializeComponent();
             _service = service;
             _research = research;
-
+            _timer = new Timer();
+            _timer.Interval = 1000;
+            _timer.Tick += TimerTicked;
             label6.Text = _service.GetResearchInfo(research);
         }
 
@@ -87,6 +93,71 @@ namespace View
                 }
                 i++;
             }
+        }
+
+        private void StartResearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (n < _research.duration)
+                _timer.Start();
+        }
+
+        private void TimerTicked(object sender, EventArgs e)
+        {
+            if (n == _research.duration)
+            {
+                _timer.Stop();
+                ShowEndMessage();
+            } 
+            StringBuilder str = new StringBuilder();
+            if (isSensorsActive)
+            {
+                UpdateGraphInfo();
+            }
+            label9.Text = str.Append(n++).Append(" min").ToString();
+
+        }
+        public void ShowEndMessage()
+        {
+            label10.Text = "Обследование закончено!";
+        }
+        private void UpdateGraphInfo ()
+        {
+            foreach (ISensor sensor in sensors)
+            {
+                sensor.CalculateValue(); 
+                sensor._ppList.Add((double)n, (double)sensor.Value);
+                sensor._pane.CurveList.Clear();
+                sensor._pane.AddCurve(string.Empty, sensor._ppList, Color.Red);
+                sensor._graphControl.Invalidate();
+                IndicatorChange(sensor);
+            }
+        }
+
+        private void IndicatorChange(ISensor sensor)
+        {
+            switch (sensor.NameOfSensor)
+            {
+                case "Артериальное давление":
+                    label2.Text = sensor.Value.ToString();
+                    break;
+                case "Проводимость кожи":
+                    label4.Text = sensor.Value.ToString();
+                    break;
+                case "Пульс":
+                    label3.Text = sensor.Value.ToString();
+                    break;
+                case "Влажность кожи":
+                    label5.Text = sensor.Value.ToString();
+                    break;
+                case "Температура кожи":
+                    label1.Text = sensor.Value.ToString();
+                    break;
+            }
+        }
+
+        private void ActivateSensorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            isSensorsActive = true;
         }
     }
 }
