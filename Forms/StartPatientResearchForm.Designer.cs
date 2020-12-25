@@ -168,9 +168,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(145, 589);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 17);
+            this.label9.Size = new System.Drawing.Size(42, 17);
             this.label9.TabIndex = 11;
-            this.label9.Text = "0";
+            this.label9.Text = "0 min";
             // 
             // label10
             // 
@@ -201,7 +201,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "StartPatientResearchForm";
-            this.Text = "StartPatientResearchForm";
+            this.Text = "Исследование";
             this.Load += new System.EventHandler(this.StartPatientResearchForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
