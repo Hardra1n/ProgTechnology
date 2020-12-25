@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,24 +13,25 @@ namespace View
 {
     public partial class AddPatientForm : Form
     {
-        public AddPatientForm()
+        ControlService _service;
+        MainMenu _form;
+        public AddPatientForm(ControlService service, MainMenu form)
         {
             InitializeComponent();
+            _service = service;
+            _form = form;
+            textBox1.Text = textBox2.Text = textBox3.Text = string.Empty;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void AddPatientButton(object sender, EventArgs e)
         {
+            if( textBox1.Text != string.Empty && textBox2.Text != string.Empty && textBox3.Text != string.Empty) {
 
-        }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+                _service.AddPatient(textBox1.Text, textBox2.Text, textBox3.Text, (byte)numericUpDown1.Value, radioButton1.Checked? "Женский" : "Мужской");
+                _form.UpdatePatientList();
+                this.Close(); 
+            }
         }
     }
 }

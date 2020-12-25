@@ -2,13 +2,31 @@ C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Training App.exe.config
 C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Training App.exe
 C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Training App.pdb
 C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.csprojAssemblyReference.cache
-C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.AddPatientForm.resources
-C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.AddPatientReaserchForm.resources
-C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.MainMenu.resources
-C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.PatientInfoForm.resources
 C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.Properties.Resources.resources
-C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training_App.StartPatientResearchForm.resources
 C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.csproj.GenerateResource.cache
 C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.exe
 C:\Users\User\source\repos\PT lab\Training App\obj\Debug\Training App.pdb
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.AddPatientForm.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.AddPatientReaserchForm.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.MainMenu.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.PatientInfoForm.resources
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.StartPatientResearchForm.resources
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Models.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\Models.pdb
+C:\Users\User\source\repos\PT lab\Training App\obj\Debug\View.csproj.CopyComplete
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\ZedGraph.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\ZedGraph.xml
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\User\source\repos\PT lab\Training App\bin\Debug\zh-tw\ZedGraph.resources.dll

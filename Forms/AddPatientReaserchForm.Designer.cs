@@ -64,7 +64,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Ходьба";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -125,9 +124,19 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(30, 258);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -154,12 +163,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(190, 461);
+            this.button1.Location = new System.Drawing.Point(194, 465);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 41);
+            this.button1.Size = new System.Drawing.Size(162, 37);
             this.button1.TabIndex = 11;
-            this.button1.Text = "Добавить исследование";
+            this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.AddResearchClick);
             // 
             // AddPatientReaserchForm
             // 

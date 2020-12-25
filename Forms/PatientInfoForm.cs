@@ -1,37 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Models;
+using System;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
 {
     public partial class PatientInfoForm : Form
     {
+        ControlService _service;
+        Patient _patient;
+
         public PatientInfoForm()
         {
             InitializeComponent();
         }
 
-        private void PatientInfoForm_Load(object sender, EventArgs e)
+        public PatientInfoForm(ControlService service, Patient patient)
         {
+            InitializeComponent();
+            _service = service;
+            _patient = patient;
+            label6.Text = patient.name;
+            label7.Text = patient.surname;
+            label8.Text = patient.fathername;
+            label9.Text = patient.age.ToString();
+            label10.Text = patient.sex;
 
         }
 
-        private void addResearchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PatientInfoForm_Load(object sender, EventArgs e)
         {
-            AddPatientReaserchForm addPatientReaserchForm = new AddPatientReaserchForm();
+            UpdateResearchList();
+        }
+
+        private void AddResearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPatientReaserchForm addPatientReaserchForm = new AddPatientReaserchForm(_service, _patient, this);
             addPatientReaserchForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void StartPatientResearchButton(object sender, EventArgs e)
         {
-            StartPatientResearchForm startPatientResearchForm = new StartPatientResearchForm();
-            startPatientResearchForm.Show();
+            var button = (Button)sender;
+            if (button != null) {
+                StartPatientResearchForm startPatientResearchForm = new StartPatientResearchForm(_service, _service.GetResearch(int.Parse(button.Tag.ToString()), _patient));
+                startPatientResearchForm.Show();
+            }
+        }
+
+        public void UpdateResearchList()
+        {
+            int y = 7;
+            foreach (Research research in _patient.researches)
+            {
+                Button button = new Button();
+                button.Tag = research.id.ToString();
+                StringBuilder buttonName = new StringBuilder();
+                button.Text = buttonName.Append(research.date.ToString())
+                                        .Append(" ")
+                                        .Append(research.type.ToString())
+                                        .Append(" ")
+                                        .Append(research.duration.ToString())
+                                        .Append(" min")
+                                        .ToString();
+                button.Location = new Point(10, y);
+                y += 30;
+                button.Width = Width - 40;
+                button.BackColor = SystemColors.ScrollBar;
+                button.Click += StartPatientResearchButton;
+                button.Font = new Font("Segoe UI", 9f);
+                button.TextAlign = ContentAlignment.MiddleLeft;
+                panel1.Controls.Add(button);
+            }
         }
     }
 }
